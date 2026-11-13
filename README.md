@@ -144,7 +144,12 @@ BwG-Track2/
 │       └── scripts/
 │           ├── update_scorecard.py           # Generates cumulative HTML Governance Scorecard for M1, M2, M3
 │           ├── show_facts.py                 # Compiles line-numbered fact sheets & PII blocklists from evidence files
-│           └── show_check.py                 # Validates & screenshots Step 7 HTML pages via headless Chromium
+│           ├── show_check.py                 # Validates & screenshots Step 7 HTML pages via headless Chromium
+│           ├── show_record.py                # Appends the Show step's evidence entry from show_facts/show_check run logs
+│           ├── write_entry.py                # Appends an evidence entry from an agent-written draft (no shell heredocs)
+│           ├── proof_gate.py                 # Holds proofs/log reads until checkpointed changes have landed
+│           ├── draw_picture.py               # Draws step diagrams with Gemini 3.1 Flash Image (provisioned throughput)
+│           └── sync_skill.py                 # Refreshes the workspace skill copy from the public repo (--check to compare)
 └── bwg-lab-setup/                            # Local no-VM setup toolkit (macOS / Linux / WSL2)
     ├── README.md                             # Detailed setup guide & OS support matrix
     ├── manual_setup.md                       # Step-by-step manual installation reference
